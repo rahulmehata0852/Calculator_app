@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap By SKILLHUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background-image: url("https://img.freepik.com/premium-vector/rs-letter-logo-design_579179-1254.jpg?w=2000");
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-size: auto; */
+    }
+</style>
+
+<body class="img-fuild bg-warning">
+
+    <div class="container my-5 w-100 bg-warning">
+        <div class="row my-5">
+            <div class="col-sm-6">
+                <h1 class="text-success" id="answer"></h1>
+
+                <input class="bg-info" type="text" name="" id="i"><br><br>
+                <input class="bg-info" type="text" name="" id="o">
+                <br><br>
+
+                <button onclick="Cal('ADD')" type="button" class="btn btn-primary">+</button>
+                <button onclick="Cal('SUB')" type="button" class="btn btn-primary">-</button>
+                <button onclick="Cal('MUL')" type="button" class="btn btn-primary">*</button>
+                <button onclick="Cal('DIV')" type="button" class="btn btn-primary">/</button>
+                <br><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="ram" style="height: 640px;"></div>
+
+
+    <script>
+
+        function Cal(op) {
+            let i = +document.getElementById("i").value
+            let o = +document.getElementById("o").value
+
+            if (op === "ADD") {
+                document.getElementById("answer").innerHTML = i + o
+            } else if (op === "SUB") {
+                document.getElementById("answer").innerHTML = i - o
+            } else if (op === "MUL") {
+                document.getElementById("answer").innerHTML = i * o
+            } else if (op === "DIV") {
+                document.getElementById("answer").innerHTML = i / o
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
